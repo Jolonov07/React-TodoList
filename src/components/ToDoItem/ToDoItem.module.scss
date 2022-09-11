@@ -1,0 +1,50 @@
+.root {
+   width: 300px;
+   height: 400px;
+   border-radius: 50px;
+   background-color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
+   text-align: center;
+   margin: 20px 0;
+   box-sizing: border-box;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, 
+               rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+   h1 {
+      flex: 0 1 100%;
+      font-size: 70px;
+   }
+   .icons {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding-top: 20px;
+      div {
+         border-radius: 50%;
+         transition: .6s;
+         margin: 20px 0 ;
+         padding: 20px 0 !important;
+         &:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+         }
+         &:active {
+            background-color: rgba(255, 255, 255, .4);
+         }
+         svg {
+            flex: 0 0 auto;
+            width: 0;
+            -webkit-transition: width 300ms;
+            transition: width 300ms;
+            color: white;
+         }
+      }
+   }
+   &:is(:hover, :focus-within) .icons {
+      width: 100px;
+      height: 100%;
+      border-radius: 0 50px 50px 0;
+   }
+   &:is(:hover, :focus-within) .icons svg {
+      width: 25px;
+   }
+}

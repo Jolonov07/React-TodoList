@@ -1,0 +1,90 @@
+.container {
+  width: 100%;
+  height: 100vh;
+
+   .formBox {
+    width: 100%;
+    // height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   }
+
+  .box {
+    position: relative;
+    background-color: white;
+    border-radius: 50px;
+    width: 400px;
+    height: 400px;
+    box-shadow: 
+       0 2px 4px rgb(0 0 0 / 10%), 
+       0 8px 16px rgb(0 0 0 / 10%);
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+   .root {
+    background-color: transparent;
+    padding-top: 40px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    .input {
+      line-height: 30px;
+      border: 2px solid transparent;
+      border-bottom-color: #777;
+      padding: .2rem 0;
+      outline: none;
+      margin: 20px 0;
+      background-color: transparent;
+      color: #0d0c22;
+      font-size: 16px;
+      transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      &:focus, :hover {
+        outline: none;
+        padding: .5rem 1rem;
+        border-radius: 1rem;
+        border-color: #7a9cc6;
+      }
+      ::placeholder {
+        color: #777;
+      }
+      &:focus::placeholder {
+        opacity: 0;
+        transition: opacity .3s;
+      }
+    }
+
+    button {
+      margin: 20px 0;
+    }
+
+    .noAuth {
+       color: red;
+       font-size: 16px;
+       text-align: center;
+       margin-top: 20px;
+       font-weight: 400;
+    }
+   }
+
+   .title {
+    position: absolute;
+    font-weight: 500;
+    top: 20px;
+   }
+
+   p {
+    a {
+      color: rgb(166, 0, 255);
+      text-decoration: underline;
+      padding: 0 0 0 10px;
+    }
+  }
+  }
+}

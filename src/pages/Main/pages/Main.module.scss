@@ -1,0 +1,29 @@
+.root {
+   width: 100%;
+   box-sizing: border-box;
+   .container {
+    margin: 0 50px;
+    .content {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 30px 50px 80px;
+      align-items: center;
+      border-bottom: 1px solid #999;
+      div {
+        width: 50%;
+      }
+      span {
+        bottom: -20px;
+        left: 0px;
+      }
+    }
+    .box {
+     display: flex;
+     margin: 40px 20px 20px;
+     justify-content: space-around;
+     flex-wrap: wrap;
+    }
+  }
+}
+ 
