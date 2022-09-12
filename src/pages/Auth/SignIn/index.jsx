@@ -8,6 +8,7 @@ import TextArea from '../../../components/TextArea'
 import { signInUrl } from '../../../configs'
 import { Form } from '../../../helpers/Form'
 import cls from './SignIn.module.scss'
+import NoAuth from '../../../components/NoAuth'
 
 const Signin = () => {
    const {
@@ -45,6 +46,14 @@ const Signin = () => {
       })
       
    }
+
+   if (localStorage.getItem('localId')) return (
+      <NoAuth 
+        link={'/main'} 
+        textContent={'Вы уже авторизовались!'}
+        textLink={'Вернутся назад!'}
+      />
+    )
    return (
       <div className={cls.container}>
          <Header />

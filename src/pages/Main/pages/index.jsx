@@ -1,9 +1,6 @@
 import React from "react"
 import Navbar from "../../../components/Header"
 import cls from './Main.module.scss'
-import { NavLink } from 'react-router-dom'
-import axios from "axios"
-import { request } from "../../../configs"
 import { Form } from '../../../helpers/Form'
 import { useForm } from "react-hook-form"
 import NoAuth from '../../../components/NoAuth'
@@ -26,6 +23,7 @@ const MainPage = () => {
     actions: { 
       postNewTodo,
       deleteTodo,
+      patchTodo,
     }
   } = Main.Hooks.use()
 
@@ -33,6 +31,7 @@ const MainPage = () => {
 
   const onSubmit = (data) => {
     postNewTodo(data)
+    reset()
   }
 
   if (!localStorage.getItem('localId')) return (
@@ -58,9 +57,7 @@ const MainPage = () => {
               text={'Add'} 
               disabled={isActive}
             />
-            
           </form>
-
           <div className={cls.box}>
             {
               todos.map(({ id, title, completed}, i) => (
@@ -69,6 +66,7 @@ const MainPage = () => {
                   title={title}
                   completed={completed}
                   deleteTodo={deleteTodo}
+                  patchTodo={patchTodo}
                   id={id}
                 />
               ))

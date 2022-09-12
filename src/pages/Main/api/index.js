@@ -1,17 +1,20 @@
-import { axiosRequeat } from "../../../configs"
+import { axiosRequest } from "../../../configs"
 
 export const get = () => {
-   return axiosRequeat.get('/todos.json')
+   return axiosRequest.get('/todos.json')
 }
 
 export const post = (data) => {
-   return axiosRequeat.post('/todos.json', data)
+   return axiosRequest.post('/todos.json', data)
 }
 
-export const remove = (id) => {
-   return axiosRequeat.delete(`/todos/${id}.json`)
-} 
+export const remove = (id) => {  
+   return axiosRequest.delete(`/todos/${id}.json`)
+}
+export const patch = (id) => {
+   return axiosRequest.patch(`/todos/${id}.json`)
+}
  
 export const favorites = (data) => {
-   return axiosRequeat.get('/fill.json', data)
+   return axiosRequest.get('/fill.json', data)
 }

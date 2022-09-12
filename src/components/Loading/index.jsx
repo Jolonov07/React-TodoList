@@ -4,7 +4,7 @@ import cls  from './Loading.module.scss'
 const Loading = () => {
    return (
       <div className={cls.container}>
-         <div class={cls.spinner}>
+         <div className={cls.spinner}>
             <span></span>
             <span></span>
             <span></span>

@@ -9,21 +9,22 @@ const ToDoItem = ({
    id, 
    title, 
    completed,
-   deleteItem, 
-   patchItem,
+   deleteTodo, 
+   patchTodo,
+   completedItem,
    }) => {
    return(
       <div className={cls.root}>
          <h1>{title}</h1>
          <div className={cls.icons}>
             <div>
-               <Delete onClick={() => deleteItem(id)}/>
+               <Delete onClick={() => deleteTodo(id)}/>
             </div>
             <div>
-               <Edit onClick={() => patchItem(id)} />
+               <Edit onClick={() => patchTodo(id)} />
             </div>
             <div>
-               <Check />
+               <Check onClick={() => completedItem(id)} />
             </div>
          </div>
       </div>

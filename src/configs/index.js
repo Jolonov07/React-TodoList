@@ -18,8 +18,8 @@ export const usersDB = (key) => `https://my-todo-6a5d4-default-rtdb.asia-southea
  
 export const request  = (endpoint) => `https://my-todo-6a5d4-default-rtdb.asia-southeast1.firebasedatabase.app${endpoint}`
 
-export const crud = (id) => `https://my-todo-6a5d4-default-rtdb.asia-southeast1.firebasedatabase.app${id}`
+export const crud = (id) => `https://my-todo-6a5d4-default-rtdb.asia-southeast1.firebasedatabase.app/todos${id}`
 
 export const apiUrl = 'https://my-todo-6a5d4-default-rtdb.asia-southeast1.firebasedatabase.app'
 
-export const axiosRequeat = axios.create({ baseURL: apiUrl })
+export const axiosRequest = axios.create({ baseURL: apiUrl })

@@ -1,13 +1,11 @@
 import React from 'react'
-import { Main } from '..'
+import { Main } from '../'
 
 const useMain = ( ) => {
   const [todos, setTodos] = React.useState()
 
-
   const get = React.useCallback(() => {
     const request = Main.API.get()
-
     request
       .then(res => {
         const data = Object.entries(res.data).map(([id, item]) => {
@@ -35,6 +33,13 @@ const useMain = ( ) => {
       .then(get)
   }, [])
 
+  const patchTodo = React.useCallback((id) => {
+    const request = Main.API.patchTodo(id)
+
+    request
+      .then(get)
+  }, [])
+
   const completedItemTodo = React.useCallback((id) => {
     const request = Main.API.post(id)
 
@@ -49,6 +54,7 @@ const useMain = ( ) => {
     actions: {
       postNewTodo,
       deleteTodo,
+      patchTodo,
       completedItemTodo,
     },
   }
