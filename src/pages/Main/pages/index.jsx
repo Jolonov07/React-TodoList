@@ -74,7 +74,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-    )
+    ) 
 }
 
 export default MainPage

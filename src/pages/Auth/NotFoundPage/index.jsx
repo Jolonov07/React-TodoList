@@ -12,7 +12,7 @@ const NotFound = () => {
             alignItems: 'center'
          }}
       >
-         <h1>ТЫ КОГО Хочешь НОЕБАТЬ</h1>
+         <h1>Ошибка 404</h1>
       </div>
    )
 }

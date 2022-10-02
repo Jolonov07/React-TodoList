@@ -4,7 +4,6 @@
 
    .formBox {
     width: 100%;
-    // height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -16,7 +15,7 @@
     background-color: white;
     border-radius: 50px;
     width: 400px;
-    height: 400px;
+    height: 450px;
     box-shadow: 
        0 2px 4px rgb(0 0 0 / 10%), 
        0 8px 16px rgb(0 0 0 / 10%);
@@ -35,9 +34,9 @@
 
     .input {
       line-height: 30px;
-      border: 2px solid transparent;
-      border-bottom-color: #777;
-      padding: .2rem 0;
+      border: 1px solid transparent;
+      border-bottom-color: #eaeaea;
+      padding: .5rem 20px;
       outline: none;
       margin: 20px 0;
       background-color: transparent;
@@ -79,7 +78,7 @@
     top: 20px;
    }
 
-   p {
+  p {
     a {
       color: rgb(166, 0, 255);
       text-decoration: underline;
